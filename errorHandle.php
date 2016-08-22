@@ -6,7 +6,7 @@ function log_error($num, $str, $file, $line, $context = null)
 function log_exception(Exception $e) 
 {
     $message = "Type: " . get_class($e) . "; Message: {$e->getMessage()}; File: {$e->getFile()}; Line: {$e->getLine()};";
-    QuoteBridge_App::make('log')->addInfo($message, 'system');
+    echo $message;
 }
 
 function check_for_fatal()
